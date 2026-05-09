@@ -1396,56 +1396,56 @@ button, input, textarea, select { font: inherit; }
 
 .staff-title {
   color: #1f2937;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 1.15;
   font-weight: 850;
 }
 
 .staff-subtitle {
-  margin-top: 8px;
+  margin-top: 4px;
   color: #475569;
-  font-size: 20px;
+  font-size: 13px;
 }
 
 .staff-add-button {
   display: inline-flex;
-  min-width: 158px;
-  min-height: 50px;
+  min-width: 110px;
+  min-height: 36px;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  border-radius: 11px;
+  gap: 6px;
+  border-radius: 8px;
   background: #1762ff;
   color: #fff;
-  font-size: 20px;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .staff-table-card {
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 9px 9px;
 }
 
 .staff-grid {
   display: grid;
-  grid-template-columns: 250px 290px 160px 145px 140px 75px;
-  min-width: 1120px;
+  grid-template-columns: 220px 260px 130px 120px 130px 90px;
+  min-width: 1000px;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .staff-head {
-  min-height: 64px;
+  min-height: 48px;
   border-bottom: 1px solid #e5e7eb;
   color: #334155;
-  font-size: 16px;
-  font-weight: 750;
+  font-size: 12px;
+  font-weight: 800;
 }
 
 .staff-row {
-  min-height: 90px;
-  border-bottom: 1px solid #e5e7eb;
+  min-height: 64px;
+  border-bottom: 1px solid #edf2f7;
   color: #475569;
-  font-size: 20px;
+  font-size: 13px;
 }
 
 .staff-row:last-child {
@@ -1455,22 +1455,24 @@ button, input, textarea, select { font: inherit; }
 .staff-name {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 12px;
 }
 
 .staff-name span {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   display: grid;
   place-content: center;
   border-radius: 999px;
   background: #2f7bff;
   color: #fff;
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .staff-name b {
   color: #172033;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -1478,13 +1480,13 @@ button, input, textarea, select { font: inherit; }
 .staff-role {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .staff-email img,
 .staff-role img {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   object-fit: contain;
 }
 
@@ -1494,8 +1496,8 @@ button, input, textarea, select { font: inherit; }
   width: fit-content;
   align-items: center;
   border-radius: 999px;
-  padding: 6px 16px;
-  font-size: 17px;
+  padding: 5px 12px;
+  font-size: 12px;
   line-height: 1;
 }
 
@@ -1525,7 +1527,7 @@ button, input, textarea, select { font: inherit; }
 }
 
 .staff-actions {
-  gap: 28px;
+  gap: 18px;
 }
 
 .staff-modal {
@@ -1539,41 +1541,41 @@ button, input, textarea, select { font: inherit; }
 }
 
 .staff-modal-card {
-  width: min(552px, 100%);
-  border-radius: 11px;
+  width: min(440px, 100%);
+  border-radius: 10px;
   background: #fff;
-  padding: 32px 30px 30px;
+  padding: 22px 22px 20px;
 }
 
 .staff-modal-card h2 {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   color: #1f2937;
-  font-size: 26px;
+  font-size: 18px;
   line-height: 1.2;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .staff-modal-card label {
   display: block;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .staff-modal-card label span {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   color: #334155;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .staff-modal-card input {
   width: 100%;
-  min-height: 52px;
+  min-height: 38px;
   border: 1px solid #d1d8e2;
-  border-radius: 10px;
-  padding: 0 20px;
+  border-radius: 8px;
+  padding: 0 12px;
   color: #334155;
-  font-size: 20px;
+  font-size: 13px;
   outline: none;
 }
 
@@ -1584,14 +1586,14 @@ button, input, textarea, select { font: inherit; }
 .staff-modal-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 30px;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .staff-modal-actions button {
-  min-height: 48px;
-  border-radius: 10px;
-  font-size: 20px;
+  min-height: 36px;
+  border-radius: 8px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -1613,14 +1615,14 @@ button, input, textarea, select { font: inherit; }
 }
 
 .assistant-composer {
-  min-height: 64px;
+  min-height: 44px;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
   border: 1px solid #d1d8e2;
-  border-radius: 22px;
+  border-radius: 14px;
   background: #fff;
-  padding: 0 14px 0 28px;
+  padding: 0 8px 0 16px;
 }
 
 .assistant-composer input {
@@ -1629,7 +1631,7 @@ button, input, textarea, select { font: inherit; }
   border: 0;
   background: transparent;
   color: #111827;
-  font-size: 18px;
+  font-size: 13px;
   outline: 0;
 }
 
@@ -1638,20 +1640,20 @@ button, input, textarea, select { font: inherit; }
 }
 
 .assistant-plus-button {
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
   display: grid;
   place-content: center;
   flex: 0 0 auto;
   color: #000;
-  font-size: 44px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 1;
 }
 
 .assistant-send-button {
-  width: 52px;
-  height: 52px;
+  width: 34px;
+  height: 34px;
   display: grid;
   place-content: center;
   flex: 0 0 auto;
@@ -1660,8 +1662,8 @@ button, input, textarea, select { font: inherit; }
 }
 
 .assistant-send-button img {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
 }
 
@@ -1946,11 +1948,11 @@ button, input, textarea, select { font: inherit; }
   }
 
   .staff-title {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .staff-subtitle {
-    font-size: 16px;
+    font-size: 12px;
   }
 
   .staff-table-card {
@@ -1958,39 +1960,39 @@ button, input, textarea, select { font: inherit; }
   }
 
   .staff-grid {
-    grid-template-columns: 240px 280px 160px 140px 140px 110px;
-    min-width: 1070px;
-    padding-inline: 20px;
+    grid-template-columns: 200px 240px 130px 120px 130px 100px;
+    min-width: 980px;
+    padding-inline: 16px;
   }
 
   .staff-row {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .staff-head {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .assistant-composer {
-    min-height: 56px;
-    border-radius: 18px;
-    gap: 12px;
-    padding-left: 18px;
+    min-height: 42px;
+    border-radius: 14px;
+    gap: 10px;
+    padding-left: 14px;
   }
 
   .assistant-composer input {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .assistant-plus-button {
-    width: 36px;
-    height: 36px;
-    font-size: 34px;
+    width: 28px;
+    height: 28px;
+    font-size: 26px;
   }
 
   .assistant-send-button {
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
   }
 
   .create-tour-page {
