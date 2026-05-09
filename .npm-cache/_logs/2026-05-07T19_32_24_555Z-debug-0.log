@@ -1,0 +1,575 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.0
+2 info using node@v22.12.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/.npmrc
+5 silly config load:file:/Users/fakhrirasyids/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm ci
+8 verbose argv "ci" "--cache" "./.npm-cache"
+9 verbose logfile logs-max:10 dir:/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/.npm-cache/_logs/2026-05-07T19_32_24_555Z-
+10 verbose logfile /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/.npm-cache/_logs/2026-05-07T19_32_24_555Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly reify moves {}
+15 silly audit bulk request {
+15 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+15 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+15 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+15 silly audit   '@babel/parser': [ '7.29.3' ],
+15 silly audit   '@babel/types': [ '7.29.0' ],
+15 silly audit   '@esbuild/aix-ppc64': [ '0.27.7' ],
+15 silly audit   '@esbuild/android-arm': [ '0.27.7' ],
+15 silly audit   '@esbuild/android-arm64': [ '0.27.7' ],
+15 silly audit   '@esbuild/android-x64': [ '0.27.7' ],
+15 silly audit   '@esbuild/darwin-arm64': [ '0.27.7' ],
+15 silly audit   '@esbuild/darwin-x64': [ '0.27.7' ],
+15 silly audit   '@esbuild/freebsd-arm64': [ '0.27.7' ],
+15 silly audit   '@esbuild/freebsd-x64': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-arm': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-arm64': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-ia32': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-loong64': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-mips64el': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-ppc64': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-riscv64': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-s390x': [ '0.27.7' ],
+15 silly audit   '@esbuild/linux-x64': [ '0.27.7' ],
+15 silly audit   '@esbuild/netbsd-arm64': [ '0.27.7' ],
+15 silly audit   '@esbuild/netbsd-x64': [ '0.27.7' ],
+15 silly audit   '@esbuild/openbsd-arm64': [ '0.27.7' ],
+15 silly audit   '@esbuild/openbsd-x64': [ '0.27.7' ],
+15 silly audit   '@esbuild/openharmony-arm64': [ '0.27.7' ],
+15 silly audit   '@esbuild/sunos-x64': [ '0.27.7' ],
+15 silly audit   '@esbuild/win32-arm64': [ '0.27.7' ],
+15 silly audit   '@esbuild/win32-ia32': [ '0.27.7' ],
+15 silly audit   '@esbuild/win32-x64': [ '0.27.7' ],
+15 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+15 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+15 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+15 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+15 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+15 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+15 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+15 silly audit   '@rolldown/pluginutils': [ '1.0.0-rc.13' ],
+15 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-android-arm64': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-darwin-arm64': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-darwin-x64': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-freebsd-x64': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-loong64-musl': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-ppc64-musl': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-openbsd-x64': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.60.3' ],
+15 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.60.3' ],
+15 silly audit   '@types/estree': [ '1.0.8' ],
+15 silly audit   '@vitejs/plugin-vue': [ '6.0.6' ],
+15 silly audit   '@volar/language-core': [ '2.4.28' ],
+15 silly audit   '@volar/source-map': [ '2.4.28' ],
+15 silly audit   '@volar/typescript': [ '2.4.28' ],
+15 silly audit   '@vue/compiler-core': [ '3.5.34' ],
+15 silly audit   '@vue/compiler-dom': [ '3.5.34' ],
+15 silly audit   '@vue/compiler-sfc': [ '3.5.34' ],
+15 silly audit   '@vue/compiler-ssr': [ '3.5.34' ],
+15 silly audit   '@vue/devtools-api': [ '6.6.4' ],
+15 silly audit   '@vue/language-core': [ '3.2.8' ],
+15 silly audit   picomatch: [ '4.0.4', '2.3.2' ],
+15 silly audit   '@vue/reactivity': [ '3.5.34' ],
+15 silly audit   '@vue/runtime-core': [ '3.5.34' ],
+15 silly audit   '@vue/runtime-dom': [ '3.5.34' ],
+15 silly audit   '@vue/server-renderer': [ '3.5.34' ],
+15 silly audit   '@vue/shared': [ '3.5.34' ],
+15 silly audit   'alien-signals': [ '3.1.2' ],
+15 silly audit   'any-promise': [ '1.3.0' ],
+15 silly audit   anymatch: [ '3.1.3' ],
+15 silly audit   arg: [ '5.0.2' ],
+15 silly audit   autoprefixer: [ '10.5.0' ],
+15 silly audit   'baseline-browser-mapping': [ '2.10.27' ],
+15 silly audit   'binary-extensions': [ '2.3.0' ],
+15 silly audit   braces: [ '3.0.3' ],
+15 silly audit   browserslist: [ '4.28.2' ],
+15 silly audit   'camelcase-css': [ '2.0.1' ],
+15 silly audit   'caniuse-lite': [ '1.0.30001792' ],
+15 silly audit   chokidar: [ '3.6.0' ],
+15 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+15 silly audit   commander: [ '4.1.1' ],
+15 silly audit   cssesc: [ '3.0.0' ],
+15 silly audit   csstype: [ '3.2.3' ],
+15 silly audit   didyoumean: [ '1.2.2' ],
+15 silly audit   dlv: [ '1.1.3' ],
+15 silly audit   'electron-to-chromium': [ '1.5.352' ],
+15 silly audit   entities: [ '7.0.1' ],
+15 silly audit   'es-errors': [ '1.3.0' ],
+15 silly audit   esbuild: [ '0.27.7' ],
+15 silly audit   escalade: [ '3.2.0' ],
+15 silly audit   'estree-walker': [ '2.0.2' ],
+15 silly audit   'fast-glob': [ '3.3.3' ],
+15 silly audit   fastq: [ '1.20.1' ],
+15 silly audit   'fill-range': [ '7.1.1' ],
+15 silly audit   'fraction.js': [ '5.3.4' ],
+15 silly audit   fsevents: [ '2.3.3' ],
+15 silly audit   'function-bind': [ '1.1.2' ],
+15 silly audit   hasown: [ '2.0.3' ],
+15 silly audit   'is-binary-path': [ '2.1.0' ],
+15 silly audit   'is-core-module': [ '2.16.2' ],
+15 silly audit   'is-extglob': [ '2.1.1' ],
+15 silly audit   'is-glob': [ '4.0.3' ],
+15 silly audit   'is-number': [ '7.0.0' ],
+15 silly audit   jiti: [ '1.21.7' ],
+15 silly audit   lilconfig: [ '3.1.3' ],
+15 silly audit   'lines-and-columns': [ '1.2.4' ],
+15 silly audit   'magic-string': [ '0.30.21' ],
+15 silly audit   merge2: [ '1.4.1' ],
+15 silly audit   micromatch: [ '4.0.8' ],
+15 silly audit   'muggle-string': [ '0.4.1' ],
+15 silly audit   mz: [ '2.7.0' ],
+15 silly audit   nanoid: [ '3.3.12' ],
+15 silly audit   'node-releases': [ '2.0.38' ],
+15 silly audit   'normalize-path': [ '3.0.0' ],
+15 silly audit   'object-assign': [ '4.1.1' ],
+15 silly audit   'object-hash': [ '3.0.0' ],
+15 silly audit   'path-browserify': [ '1.0.1' ],
+15 silly audit   'path-parse': [ '1.0.7' ],
+15 silly audit   picocolors: [ '1.1.1' ],
+15 silly audit   pify: [ '2.3.0' ],
+15 silly audit   pirates: [ '4.0.7' ],
+15 silly audit   postcss: [ '8.5.14' ],
+15 silly audit   'postcss-import': [ '15.1.0' ],
+15 silly audit   'postcss-js': [ '4.1.0' ],
+15 silly audit   'postcss-load-config': [ '6.0.1' ],
+15 silly audit   'postcss-nested': [ '6.2.0' ],
+15 silly audit   'postcss-selector-parser': [ '6.1.2' ],
+15 silly audit   'postcss-value-parser': [ '4.2.0' ],
+15 silly audit   'queue-microtask': [ '1.2.3' ],
+15 silly audit   'read-cache': [ '1.0.0' ],
+15 silly audit   readdirp: [ '3.6.0' ],
+15 silly audit   resolve: [ '1.22.12' ],
+15 silly audit   reusify: [ '1.1.0' ],
+15 silly audit   rollup: [ '4.60.3' ],
+15 silly audit   'run-parallel': [ '1.2.0' ],
+15 silly audit   'source-map-js': [ '1.2.1' ],
+15 silly audit   sucrase: [ '3.35.1' ],
+15 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+15 silly audit   tailwindcss: [ '3.4.19' ],
+15 silly audit   thenify: [ '3.3.1' ],
+15 silly audit   'thenify-all': [ '1.6.0' ],
+15 silly audit   tinyglobby: [ '0.2.16' ],
+15 silly audit   fdir: [ '6.5.0' ],
+15 silly audit   'to-regex-range': [ '5.0.1' ],
+15 silly audit   'ts-interface-checker': [ '0.1.13' ],
+15 silly audit   typescript: [ '5.9.3' ],
+15 silly audit   'update-browserslist-db': [ '1.2.3' ],
+15 silly audit   'util-deprecate': [ '1.0.2' ],
+15 silly audit   vite: [ '7.3.3' ],
+15 silly audit   'vscode-uri': [ '3.1.0' ],
+15 silly audit   vue: [ '3.5.34' ],
+15 silly audit   'vue-router': [ '4.6.4' ],
+15 silly audit   'vue-tsc': [ '3.2.8' ]
+15 silly audit }
+16 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-win32-x64-msvc
+17 silly reify mark deleted [
+17 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-win32-x64-msvc'
+17 silly reify ]
+18 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-win32-x64-gnu
+19 silly reify mark deleted [
+19 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-win32-x64-gnu'
+19 silly reify ]
+20 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-win32-ia32-msvc
+21 silly reify mark deleted [
+21 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-win32-ia32-msvc'
+21 silly reify ]
+22 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-win32-arm64-msvc
+23 silly reify mark deleted [
+23 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-win32-arm64-msvc'
+23 silly reify ]
+24 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-openharmony-arm64
+25 silly reify mark deleted [
+25 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-openharmony-arm64'
+25 silly reify ]
+26 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-openbsd-x64
+27 silly reify mark deleted [
+27 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-openbsd-x64'
+27 silly reify ]
+28 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-x64-musl
+29 silly reify mark deleted [
+29 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-x64-musl'
+29 silly reify ]
+30 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-x64-gnu
+31 silly reify mark deleted [
+31 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-x64-gnu'
+31 silly reify ]
+32 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-s390x-gnu
+33 silly reify mark deleted [
+33 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-s390x-gnu'
+33 silly reify ]
+34 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-riscv64-musl
+35 silly reify mark deleted [
+35 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-riscv64-musl'
+35 silly reify ]
+36 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-riscv64-gnu
+37 silly reify mark deleted [
+37 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-riscv64-gnu'
+37 silly reify ]
+38 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-ppc64-musl
+39 silly reify mark deleted [
+39 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-ppc64-musl'
+39 silly reify ]
+40 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-ppc64-gnu
+41 silly reify mark deleted [
+41 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-ppc64-gnu'
+41 silly reify ]
+42 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-loong64-musl
+43 silly reify mark deleted [
+43 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-loong64-musl'
+43 silly reify ]
+44 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-loong64-gnu
+45 silly reify mark deleted [
+45 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-loong64-gnu'
+45 silly reify ]
+46 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-arm64-musl
+47 silly reify mark deleted [
+47 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-arm64-musl'
+47 silly reify ]
+48 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-arm64-gnu
+49 silly reify mark deleted [
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-arm64-gnu'
+49 silly reify ]
+50 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-arm-musleabihf
+51 silly reify mark deleted [
+51 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-arm-musleabihf'
+51 silly reify ]
+52 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-arm-gnueabihf
+53 silly reify mark deleted [
+53 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-linux-arm-gnueabihf'
+53 silly reify ]
+54 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-freebsd-x64
+55 silly reify mark deleted [
+55 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-freebsd-x64'
+55 silly reify ]
+56 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-freebsd-arm64
+57 silly reify mark deleted [
+57 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-freebsd-arm64'
+57 silly reify ]
+58 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-darwin-x64
+59 silly reify mark deleted [
+59 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-darwin-x64'
+59 silly reify ]
+60 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-android-arm64
+61 silly reify mark deleted [
+61 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-android-arm64'
+61 silly reify ]
+62 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-android-arm-eabi
+63 silly reify mark deleted [
+63 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-android-arm-eabi'
+63 silly reify ]
+64 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/win32-x64
+65 silly reify mark deleted [
+65 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/win32-x64'
+65 silly reify ]
+66 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/win32-ia32
+67 silly reify mark deleted [
+67 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/win32-ia32'
+67 silly reify ]
+68 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/win32-arm64
+69 silly reify mark deleted [
+69 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/win32-arm64'
+69 silly reify ]
+70 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/sunos-x64
+71 silly reify mark deleted [
+71 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/sunos-x64'
+71 silly reify ]
+72 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/openharmony-arm64
+73 silly reify mark deleted [
+73 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/openharmony-arm64'
+73 silly reify ]
+74 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/openbsd-x64
+75 silly reify mark deleted [
+75 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/openbsd-x64'
+75 silly reify ]
+76 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/openbsd-arm64
+77 silly reify mark deleted [
+77 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/openbsd-arm64'
+77 silly reify ]
+78 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/netbsd-x64
+79 silly reify mark deleted [
+79 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/netbsd-x64'
+79 silly reify ]
+80 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/netbsd-arm64
+81 silly reify mark deleted [
+81 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/netbsd-arm64'
+81 silly reify ]
+82 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-x64
+83 silly reify mark deleted [
+83 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-x64'
+83 silly reify ]
+84 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-s390x
+85 silly reify mark deleted [
+85 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-s390x'
+85 silly reify ]
+86 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-riscv64
+87 silly reify mark deleted [
+87 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-riscv64'
+87 silly reify ]
+88 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-ppc64
+89 silly reify mark deleted [
+89 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-ppc64'
+89 silly reify ]
+90 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-mips64el
+91 silly reify mark deleted [
+91 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-mips64el'
+91 silly reify ]
+92 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-loong64
+93 silly reify mark deleted [
+93 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-loong64'
+93 silly reify ]
+94 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-ia32
+95 silly reify mark deleted [
+95 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-ia32'
+95 silly reify ]
+96 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-arm64
+97 silly reify mark deleted [
+97 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-arm64'
+97 silly reify ]
+98 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-arm
+99 silly reify mark deleted [
+99 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/linux-arm'
+99 silly reify ]
+100 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/freebsd-x64
+101 silly reify mark deleted [
+101 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/freebsd-x64'
+101 silly reify ]
+102 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/freebsd-arm64
+103 silly reify mark deleted [
+103 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/freebsd-arm64'
+103 silly reify ]
+104 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/darwin-x64
+105 silly reify mark deleted [
+105 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/darwin-x64'
+105 silly reify ]
+106 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/android-x64
+107 silly reify mark deleted [
+107 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/android-x64'
+107 silly reify ]
+108 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/android-arm64
+109 silly reify mark deleted [
+109 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/android-arm64'
+109 silly reify ]
+110 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/android-arm
+111 silly reify mark deleted [
+111 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/android-arm'
+111 silly reify ]
+112 verbose reify failed optional dependency /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/aix-ppc64
+113 silly reify mark deleted [
+113 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/aix-ppc64'
+113 silly reify ]
+114 silly audit bulk request failed undefined
+115 verbose audit error FetchError: request to https://registry.npmjs.org/-/npm/v1/security/audits/quick failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+115 verbose audit error     at ClientRequest.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/minipass-fetch/lib/index.js:130:14)
+115 verbose audit error     at ClientRequest.emit (node:events:524:28)
+115 verbose audit error     at emitErrorEvent (node:_http_client:104:11)
+115 verbose audit error     at _destroy (node:_http_client:892:9)
+115 verbose audit error     at onSocketNT (node:_http_client:912:5)
+115 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {
+115 verbose audit error   code: 'ENOTFOUND',
+115 verbose audit error   errno: 'ENOTFOUND',
+115 verbose audit error   syscall: 'getaddrinfo',
+115 verbose audit error   hostname: 'registry.npmjs.org',
+115 verbose audit error   type: 'system'
+115 verbose audit error }
+116 silly audit error undefined
+117 silly audit report null
+118 silly tarball no local data for vue-tsc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue-tsc/-/vue-tsc-3.2.8.tgz. Extracting by manifest.
+119 silly tarball no local data for vue@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue/-/vue-3.5.34.tgz. Extracting by manifest.
+120 silly tarball no local data for vscode-uri@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vscode-uri/-/vscode-uri-3.1.0.tgz. Extracting by manifest.
+121 silly tarball no local data for util-deprecate@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/util-deprecate/-/util-deprecate-1.0.2.tgz. Extracting by manifest.
+122 silly tarball no local data for vite@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-7.3.3.tgz. Extracting by manifest.
+123 silly tarball no local data for update-browserslist-db@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz. Extracting by manifest.
+124 silly tarball no local data for ts-interface-checker@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz. Extracting by manifest.
+125 silly tarball no local data for typescript@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/typescript/-/typescript-5.9.3.tgz. Extracting by manifest.
+126 silly tarball no local data for tinyglobby@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.16.tgz. Extracting by manifest.
+127 silly tarball no local data for thenify-all@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/thenify-all/-/thenify-all-1.6.0.tgz. Extracting by manifest.
+128 silly tarball no local data for to-regex-range@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/to-regex-range/-/to-regex-range-5.0.1.tgz. Extracting by manifest.
+129 silly tarball no local data for thenify@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/thenify/-/thenify-3.3.1.tgz. Extracting by manifest.
+130 silly tarball no local data for tailwindcss@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tailwindcss/-/tailwindcss-3.4.19.tgz. Extracting by manifest.
+131 silly tarball no local data for supports-preserve-symlinks-flag@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz. Extracting by manifest.
+132 silly tarball no local data for sucrase@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/sucrase/-/sucrase-3.35.1.tgz. Extracting by manifest.
+133 silly tarball no local data for source-map-js@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/source-map-js/-/source-map-js-1.2.1.tgz. Extracting by manifest.
+134 silly tarball no local data for run-parallel@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/run-parallel/-/run-parallel-1.2.0.tgz. Extracting by manifest.
+135 silly tarball no local data for rollup@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/rollup/-/rollup-4.60.3.tgz. Extracting by manifest.
+136 silly tarball no local data for resolve@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/resolve/-/resolve-1.22.12.tgz. Extracting by manifest.
+137 silly tarball no local data for read-cache@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/read-cache/-/read-cache-1.0.0.tgz. Extracting by manifest.
+138 silly tarball no local data for queue-microtask@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/queue-microtask/-/queue-microtask-1.2.3.tgz. Extracting by manifest.
+139 silly tarball no local data for postcss-value-parser@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz. Extracting by manifest.
+140 silly tarball no local data for reusify@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/reusify/-/reusify-1.1.0.tgz. Extracting by manifest.
+141 silly tarball no local data for postcss-nested@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss-nested/-/postcss-nested-6.2.0.tgz. Extracting by manifest.
+142 silly tarball no local data for postcss-load-config@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss-load-config/-/postcss-load-config-6.0.1.tgz. Extracting by manifest.
+143 silly tarball no local data for postcss-js@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss-js/-/postcss-js-4.1.0.tgz. Extracting by manifest.
+144 silly tarball no local data for postcss@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss/-/postcss-8.5.14.tgz. Extracting by manifest.
+145 silly tarball no local data for postcss-selector-parser@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss-selector-parser/-/postcss-selector-parser-6.1.2.tgz. Extracting by manifest.
+146 silly tarball no local data for postcss-import@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/postcss-import/-/postcss-import-15.1.0.tgz. Extracting by manifest.
+147 silly tarball no local data for pirates@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/pirates/-/pirates-4.0.7.tgz. Extracting by manifest.
+148 silly tarball no local data for picomatch@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-2.3.2.tgz. Extracting by manifest.
+149 silly tarball no local data for picocolors@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picocolors/-/picocolors-1.1.1.tgz. Extracting by manifest.
+150 silly tarball no local data for pify@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/pify/-/pify-2.3.0.tgz. Extracting by manifest.
+151 silly tarball no local data for object-hash@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/object-hash/-/object-hash-3.0.0.tgz. Extracting by manifest.
+152 silly tarball no local data for path-browserify@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/path-browserify/-/path-browserify-1.0.1.tgz. Extracting by manifest.
+153 silly tarball no local data for path-parse@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/path-parse/-/path-parse-1.0.7.tgz. Extracting by manifest.
+154 silly tarball no local data for object-assign@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/object-assign/-/object-assign-4.1.1.tgz. Extracting by manifest.
+155 silly tarball no local data for readdirp@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/readdirp/-/readdirp-3.6.0.tgz. Extracting by manifest.
+156 silly tarball no local data for node-releases@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/node-releases/-/node-releases-2.0.38.tgz. Extracting by manifest.
+157 silly tarball no local data for normalize-path@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/normalize-path/-/normalize-path-3.0.0.tgz. Extracting by manifest.
+158 silly tarball no local data for mz@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/mz/-/mz-2.7.0.tgz. Extracting by manifest.
+159 silly tarball no local data for nanoid@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/nanoid/-/nanoid-3.3.12.tgz. Extracting by manifest.
+160 silly tarball no local data for micromatch@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/micromatch/-/micromatch-4.0.8.tgz. Extracting by manifest.
+161 silly tarball no local data for muggle-string@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/muggle-string/-/muggle-string-0.4.1.tgz. Extracting by manifest.
+162 silly tarball no local data for magic-string@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/magic-string/-/magic-string-0.30.21.tgz. Extracting by manifest.
+163 silly tarball no local data for merge2@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/merge2/-/merge2-1.4.1.tgz. Extracting by manifest.
+164 silly tarball no local data for lilconfig@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/lilconfig/-/lilconfig-3.1.3.tgz. Extracting by manifest.
+165 silly tarball no local data for lines-and-columns@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/lines-and-columns/-/lines-and-columns-1.2.4.tgz. Extracting by manifest.
+166 silly tarball no local data for vue-router@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue-router/-/vue-router-4.6.4.tgz. Extracting by manifest.
+167 silly tarball no local data for is-number@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/is-number/-/is-number-7.0.0.tgz. Extracting by manifest.
+168 silly tarball no local data for jiti@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/jiti/-/jiti-1.21.7.tgz. Extracting by manifest.
+169 silly tarball no local data for is-extglob@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/is-extglob/-/is-extglob-2.1.1.tgz. Extracting by manifest.
+170 silly tarball no local data for is-core-module@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/is-core-module/-/is-core-module-2.16.2.tgz. Extracting by manifest.
+171 silly tarball no local data for is-binary-path@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/is-binary-path/-/is-binary-path-2.1.0.tgz. Extracting by manifest.
+172 silly tarball no local data for function-bind@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/function-bind/-/function-bind-1.1.2.tgz. Extracting by manifest.
+173 silly tarball no local data for glob-parent@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/glob-parent/-/glob-parent-6.0.2.tgz. Extracting by manifest.
+174 silly tarball no local data for fsevents@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fsevents/-/fsevents-2.3.3.tgz. Extracting by manifest.
+175 silly tarball no local data for fraction.js@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fraction.js/-/fraction.js-5.3.4.tgz. Extracting by manifest.
+176 silly tarball no local data for fill-range@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fill-range/-/fill-range-7.1.1.tgz. Extracting by manifest.
+177 silly tarball no local data for fastq@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fastq/-/fastq-1.20.1.tgz. Extracting by manifest.
+178 silly tarball no local data for hasown@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/hasown/-/hasown-2.0.3.tgz. Extracting by manifest.
+179 silly tarball no local data for escalade@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/escalade/-/escalade-3.2.0.tgz. Extracting by manifest.
+180 silly tarball no local data for esbuild@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/esbuild/-/esbuild-0.27.7.tgz. Extracting by manifest.
+181 silly tarball no local data for estree-walker@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/estree-walker/-/estree-walker-2.0.2.tgz. Extracting by manifest.
+182 silly tarball no local data for fast-glob@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fast-glob/-/fast-glob-3.3.3.tgz. Extracting by manifest.
+183 silly tarball no local data for es-errors@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/es-errors/-/es-errors-1.3.0.tgz. Extracting by manifest.
+184 silly tarball no local data for entities@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/entities/-/entities-7.0.1.tgz. Extracting by manifest.
+185 silly tarball no local data for electron-to-chromium@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/electron-to-chromium/-/electron-to-chromium-1.5.352.tgz. Extracting by manifest.
+186 silly tarball no local data for csstype@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/csstype/-/csstype-3.2.3.tgz. Extracting by manifest.
+187 silly tarball no local data for cssesc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/cssesc/-/cssesc-3.0.0.tgz. Extracting by manifest.
+188 silly tarball no local data for dlv@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/dlv/-/dlv-1.1.3.tgz. Extracting by manifest.
+189 silly tarball no local data for is-glob@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/is-glob/-/is-glob-4.0.3.tgz. Extracting by manifest.
+190 silly tarball no local data for chokidar@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/chokidar/-/chokidar-3.6.0.tgz. Extracting by manifest.
+191 silly tarball no local data for camelcase-css@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/camelcase-css/-/camelcase-css-2.0.1.tgz. Extracting by manifest.
+192 silly tarball no local data for browserslist@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/browserslist/-/browserslist-4.28.2.tgz. Extracting by manifest.
+193 silly tarball no local data for caniuse-lite@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/caniuse-lite/-/caniuse-lite-1.0.30001792.tgz. Extracting by manifest.
+194 silly tarball no local data for binary-extensions@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/binary-extensions/-/binary-extensions-2.3.0.tgz. Extracting by manifest.
+195 silly tarball no local data for braces@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/braces/-/braces-3.0.3.tgz. Extracting by manifest.
+196 silly tarball no local data for autoprefixer@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/autoprefixer/-/autoprefixer-10.5.0.tgz. Extracting by manifest.
+197 silly tarball no local data for arg@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/arg/-/arg-5.0.2.tgz. Extracting by manifest.
+198 silly tarball no local data for baseline-browser-mapping@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/baseline-browser-mapping/-/baseline-browser-mapping-2.10.27.tgz. Extracting by manifest.
+199 silly tarball no local data for anymatch@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/anymatch/-/anymatch-3.1.3.tgz. Extracting by manifest.
+200 silly tarball no local data for commander@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/commander/-/commander-4.1.1.tgz. Extracting by manifest.
+201 silly tarball no local data for any-promise@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/any-promise/-/any-promise-1.3.0.tgz. Extracting by manifest.
+202 silly tarball no local data for didyoumean@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/didyoumean/-/didyoumean-1.2.2.tgz. Extracting by manifest.
+203 silly tarball no local data for @vue/shared@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/shared/-/shared-3.5.34.tgz. Extracting by manifest.
+204 silly tarball no local data for alien-signals@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/alien-signals/-/alien-signals-3.1.2.tgz. Extracting by manifest.
+205 silly tarball no local data for @vue/server-renderer@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/server-renderer/-/server-renderer-3.5.34.tgz. Extracting by manifest.
+206 silly tarball no local data for @vue/reactivity@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/reactivity/-/reactivity-3.5.34.tgz. Extracting by manifest.
+207 silly tarball no local data for @vue/runtime-core@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/runtime-core/-/runtime-core-3.5.34.tgz. Extracting by manifest.
+208 silly tarball no local data for @vue/runtime-dom@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/runtime-dom/-/runtime-dom-3.5.34.tgz. Extracting by manifest.
+209 silly tarball no local data for @vue/devtools-api@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/devtools-api/-/devtools-api-6.6.4.tgz. Extracting by manifest.
+210 silly tarball no local data for @vue/compiler-ssr@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/compiler-ssr/-/compiler-ssr-3.5.34.tgz. Extracting by manifest.
+211 silly tarball no local data for @vue/compiler-dom@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/compiler-dom/-/compiler-dom-3.5.34.tgz. Extracting by manifest.
+212 silly tarball no local data for @vue/compiler-sfc@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/compiler-sfc/-/compiler-sfc-3.5.34.tgz. Extracting by manifest.
+213 silly tarball no local data for @vue/compiler-core@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/compiler-core/-/compiler-core-3.5.34.tgz. Extracting by manifest.
+214 silly tarball no local data for @vue/language-core@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vue/language-core/-/language-core-3.2.8.tgz. Extracting by manifest.
+215 silly tarball no local data for @types/estree@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@types/estree/-/estree-1.0.8.tgz. Extracting by manifest.
+216 silly tarball no local data for @rollup/rollup-darwin-arm64@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.60.3.tgz. Extracting by manifest.
+217 silly tarball no local data for @volar/source-map@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@volar/source-map/-/source-map-2.4.28.tgz. Extracting by manifest.
+218 silly tarball no local data for @volar/language-core@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@volar/language-core/-/language-core-2.4.28.tgz. Extracting by manifest.
+219 silly tarball no local data for @vitejs/plugin-vue@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@vitejs/plugin-vue/-/plugin-vue-6.0.6.tgz. Extracting by manifest.
+220 silly tarball no local data for @volar/typescript@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@volar/typescript/-/typescript-2.4.28.tgz. Extracting by manifest.
+221 silly tarball no local data for @nodelib/fs.walk@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz. Extracting by manifest.
+222 silly tarball no local data for @rolldown/pluginutils@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@rolldown/pluginutils/-/pluginutils-1.0.0-rc.13.tgz. Extracting by manifest.
+223 silly tarball no local data for @jridgewell/trace-mapping@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz. Extracting by manifest.
+224 silly tarball no local data for @jridgewell/sourcemap-codec@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz. Extracting by manifest.
+225 silly tarball no local data for @jridgewell/gen-mapping@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz. Extracting by manifest.
+226 silly tarball no local data for @esbuild/darwin-arm64@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@esbuild/darwin-arm64/-/darwin-arm64-0.27.7.tgz. Extracting by manifest.
+227 silly tarball no local data for @jridgewell/resolve-uri@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz. Extracting by manifest.
+228 silly tarball no local data for @nodelib/fs.stat@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz. Extracting by manifest.
+229 silly tarball no local data for @babel/types@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@babel/types/-/types-7.29.0.tgz. Extracting by manifest.
+230 silly tarball no local data for @babel/parser@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@babel/parser/-/parser-7.29.3.tgz. Extracting by manifest.
+231 silly tarball no local data for @babel/helper-string-parser@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@babel/helper-string-parser/-/helper-string-parser-7.27.1.tgz. Extracting by manifest.
+232 silly tarball no local data for @alloc/quick-lru@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@alloc/quick-lru/-/quick-lru-5.2.0.tgz. Extracting by manifest.
+233 silly tarball no local data for @nodelib/fs.scandir@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz. Extracting by manifest.
+234 silly tarball no local data for @babel/helper-validator-identifier@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz. Extracting by manifest.
+235 silly tarball no local data for fdir@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fdir/-/fdir-6.5.0.tgz. Extracting by manifest.
+236 silly tarball no local data for picomatch@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-4.0.4.tgz. Extracting by manifest.
+237 silly tarball no local data for fdir@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/fdir/-/fdir-6.5.0.tgz. Extracting by manifest.
+238 silly tarball no local data for glob-parent@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/glob-parent/-/glob-parent-5.1.2.tgz. Extracting by manifest.
+239 silly tarball no local data for picomatch@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-4.0.4.tgz. Extracting by manifest.
+240 silly tarball no local data for glob-parent@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/glob-parent/-/glob-parent-5.1.2.tgz. Extracting by manifest.
+241 silly tarball no local data for picomatch@https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/picomatch/-/picomatch-4.0.4.tgz. Extracting by manifest.
+242 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue-tsc/-/vue-tsc-3.2.8.tgz attempt 1 failed with ENOTFOUND
+243 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue/-/vue-3.5.34.tgz attempt 1 failed with ENOTFOUND
+244 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vscode-uri/-/vscode-uri-3.1.0.tgz attempt 1 failed with ENOTFOUND
+245 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/util-deprecate/-/util-deprecate-1.0.2.tgz attempt 1 failed with ENOTFOUND
+246 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-7.3.3.tgz attempt 1 failed with ENOTFOUND
+247 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz attempt 1 failed with ENOTFOUND
+248 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz attempt 1 failed with ENOTFOUND
+249 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/typescript/-/typescript-5.9.3.tgz attempt 1 failed with ENOTFOUND
+250 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.16.tgz attempt 1 failed with ENOTFOUND
+251 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/thenify-all/-/thenify-all-1.6.0.tgz attempt 1 failed with ENOTFOUND
+252 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/to-regex-range/-/to-regex-range-5.0.1.tgz attempt 1 failed with ENOTFOUND
+253 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/thenify/-/thenify-3.3.1.tgz attempt 1 failed with ENOTFOUND
+254 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tailwindcss/-/tailwindcss-3.4.19.tgz attempt 1 failed with ENOTFOUND
+255 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz attempt 1 failed with ENOTFOUND
+256 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/sucrase/-/sucrase-3.35.1.tgz attempt 1 failed with ENOTFOUND
+257 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue-tsc/-/vue-tsc-3.2.8.tgz attempt 2 failed with ENOTFOUND
+258 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue/-/vue-3.5.34.tgz attempt 2 failed with ENOTFOUND
+259 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vscode-uri/-/vscode-uri-3.1.0.tgz attempt 2 failed with ENOTFOUND
+260 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/util-deprecate/-/util-deprecate-1.0.2.tgz attempt 2 failed with ENOTFOUND
+261 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-7.3.3.tgz attempt 2 failed with ENOTFOUND
+262 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz attempt 2 failed with ENOTFOUND
+263 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz attempt 2 failed with ENOTFOUND
+264 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/typescript/-/typescript-5.9.3.tgz attempt 2 failed with ENOTFOUND
+265 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.16.tgz attempt 2 failed with ENOTFOUND
+266 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/thenify-all/-/thenify-all-1.6.0.tgz attempt 2 failed with ENOTFOUND
+267 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/to-regex-range/-/to-regex-range-5.0.1.tgz attempt 2 failed with ENOTFOUND
+268 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/thenify/-/thenify-3.3.1.tgz attempt 2 failed with ENOTFOUND
+269 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tailwindcss/-/tailwindcss-3.4.19.tgz attempt 2 failed with ENOTFOUND
+270 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz attempt 2 failed with ENOTFOUND
+271 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/sucrase/-/sucrase-3.35.1.tgz attempt 2 failed with ENOTFOUND
+272 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue-tsc/-/vue-tsc-3.2.8.tgz attempt 3 failed with ENOTFOUND
+273 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vue/-/vue-3.5.34.tgz attempt 3 failed with ENOTFOUND
+274 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vscode-uri/-/vscode-uri-3.1.0.tgz attempt 3 failed with ENOTFOUND
+275 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/util-deprecate/-/util-deprecate-1.0.2.tgz attempt 3 failed with ENOTFOUND
+276 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/vite/-/vite-7.3.3.tgz attempt 3 failed with ENOTFOUND
+277 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz attempt 3 failed with ENOTFOUND
+278 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz attempt 3 failed with ENOTFOUND
+279 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/typescript/-/typescript-5.9.3.tgz attempt 3 failed with ENOTFOUND
+280 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tinyglobby/-/tinyglobby-0.2.16.tgz attempt 3 failed with ENOTFOUND
+281 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/thenify-all/-/thenify-all-1.6.0.tgz attempt 3 failed with ENOTFOUND
+282 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/to-regex-range/-/to-regex-range-5.0.1.tgz attempt 3 failed with ENOTFOUND
+283 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/thenify/-/thenify-3.3.1.tgz attempt 3 failed with ENOTFOUND
+284 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/tailwindcss/-/tailwindcss-3.4.19.tgz attempt 3 failed with ENOTFOUND
+285 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz attempt 3 failed with ENOTFOUND
+286 http fetch GET https://packages.applied-caas-gateway1.internal.api.openai.org/artifactory/api/npm/npm-public/sucrase/-/sucrase-3.35.1.tgz attempt 3 failed with ENOTFOUND
+287 verbose cwd /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue
+288 verbose os Darwin 24.1.0
+289 verbose node v22.12.0
+290 verbose npm  v10.9.0
+291 error Exit handler never called!
+292 error This is an error with npm itself. Please report this error at:
+293 error   <https://github.com/npm/cli/issues>
+294 verbose exit 1
+295 verbose code 1
+296 error A complete log of this run can be found in: /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/.npm-cache/_logs/2026-05-07T19_32_24_555Z-debug-0.log

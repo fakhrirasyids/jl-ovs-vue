@@ -1,0 +1,204 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.9.0
+2 info using node@v22.12.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/.npmrc
+5 silly config load:file:/Users/fakhrirasyids/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" "./.npm-cache"
+9 verbose logfile logs-max:10 dir:/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/.npm-cache/_logs/2026-05-07T19_32_02_139Z-
+10 verbose logfile /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/.npm-cache/_logs/2026-05-07T19_32_02_139Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly reify mark retired [
+14 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/baseline-browser-mapping'
+14 silly reify ]
+15 silly reify mark retired [
+15 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/caniuse-lite'
+15 silly reify ]
+16 silly reify mark retired [
+16 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/electron-to-chromium'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/esbuild'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/is-core-module'
+18 silly reify ]
+19 silly reify mark retired [
+19 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/nanoid'
+19 silly reify ]
+20 silly reify mark retired [
+20 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/postcss'
+20 silly reify ]
+21 silly reify mark retired [
+21 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/rollup'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/vite'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/vue'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/vue-tsc'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@babel/parser'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/darwin-arm64'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rolldown/pluginutils'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-darwin-arm64'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vitejs/plugin-vue'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/compiler-core'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/compiler-dom'
+31 silly reify ]
+32 silly reify mark retired [
+32 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/compiler-sfc'
+32 silly reify ]
+33 silly reify mark retired [
+33 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/compiler-ssr'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/language-core'
+34 silly reify ]
+35 silly reify mark retired [
+35 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/reactivity'
+35 silly reify ]
+36 silly reify mark retired [
+36 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/runtime-core'
+36 silly reify ]
+37 silly reify mark retired [
+37 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/runtime-dom'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/server-renderer'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/shared'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/autoprefixer',
+40 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/autoprefixer'
+40 silly reify ]
+41 silly reify mark retired [
+41 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/browserslist',
+41 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/browserslist'
+41 silly reify ]
+42 silly reify mark retired [
+42 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/cssesc',
+42 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/cssesc'
+42 silly reify ]
+43 silly reify mark retired [
+43 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/jiti',
+43 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/jiti'
+43 silly reify ]
+44 silly reify mark retired [
+44 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/resolve',
+44 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/resolve'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/sucrase',
+45 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/sucrase',
+45 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/sucrase-node'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/tailwindcss',
+46 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/tailwind',
+46 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/tailwindcss'
+46 silly reify ]
+47 silly reify mark retired [
+47 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/update-browserslist-db',
+47 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/update-browserslist-db'
+47 silly reify ]
+48 silly reify mark retired [
+48 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/typescript',
+48 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/tsc',
+48 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/tsserver'
+48 silly reify ]
+49 silly reify moves {
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/baseline-browser-mapping': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.baseline-browser-mapping-glBbecLv',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/caniuse-lite': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.caniuse-lite-VWd4u0Dg',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/electron-to-chromium': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.electron-to-chromium-UpVdPzke',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/esbuild': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.esbuild-jKJpCv8O',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/is-core-module': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.is-core-module-7szAUuHL',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/nanoid': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.nanoid-FduzqR4K',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/postcss': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.postcss-YenUT1fo',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/rollup': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.rollup-j9LGOtSX',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/vite': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.vite-tu1KNHyR',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/vue': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.vue-bD7R7IM6',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/vue-tsc': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.vue-tsc-JkccViEi',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@babel/parser': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@babel/.parser-ELeHp81T',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/darwin-arm64': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@esbuild/.darwin-arm64-DUNmZiqx',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rolldown/pluginutils': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rolldown/.pluginutils-WPCWQepc',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/rollup-darwin-arm64': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@rollup/.rollup-darwin-arm64-DqJBUuI8',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vitejs/plugin-vue': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vitejs/.plugin-vue-vUvyygXW',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/compiler-core': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.compiler-core-PECBcfcS',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/compiler-dom': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.compiler-dom-EE0YiBDY',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/compiler-sfc': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.compiler-sfc-1DR2orRp',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/compiler-ssr': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.compiler-ssr-Vu1VKcmX',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/language-core': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.language-core-AKUE65Fz',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/reactivity': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.reactivity-isOwr2TN',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/runtime-core': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.runtime-core-IMtWv4rV',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/runtime-dom': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.runtime-dom-98dJFXdF',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/server-renderer': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.server-renderer-U9osuJhu',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/shared': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/@vue/.shared-pblHfW3H',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/autoprefixer': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.autoprefixer-YkmyGOn7',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/autoprefixer': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.autoprefixer-uBCsTFNz',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/browserslist': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.browserslist-pEbNscfU',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/browserslist': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.browserslist-zGY0ce1r',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/cssesc': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.cssesc-N244JSbb',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/cssesc': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.cssesc-nuXPx67W',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/jiti': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.jiti-0WzlS5ye',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/jiti': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.jiti-eVfOvCCq',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/resolve': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.resolve-URHmvShL',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/resolve': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.resolve-Z3rtzsVP',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/sucrase': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.sucrase-dIEZdmJI',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/sucrase': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.sucrase-gz8OGB9c',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/sucrase-node': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.sucrase-node-dybVBWCE',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/tailwindcss': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.tailwindcss-TpseGZmb',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/tailwind': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.tailwind-iDCoVhwF',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/tailwindcss': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.tailwindcss-E5cjtjj7',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/update-browserslist-db': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.update-browserslist-db-QX8oijaR',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/update-browserslist-db': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.update-browserslist-db-oEdjhfRz',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/typescript': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.typescript-arWoNmUa',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/tsc': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.tsc-XzOs7qoj',
+49 silly reify   '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/tsserver': '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.bin/.tsserver-qXeGcQCV'
+49 silly reify }
+50 verbose stack Error: ENOTEMPTY: directory not empty, rename '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/autoprefixer' -> '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.autoprefixer-YkmyGOn7'
+50 verbose stack     at async Object.rename (node:internal/fs/promises:783:10)
+50 verbose stack     at async moveFile (/usr/local/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+50 verbose stack     at async Promise.allSettled (index 26)
+50 verbose stack     at async [reifyPackages] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+50 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+50 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+50 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:207:9)
+50 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:74:5)
+51 error code ENOTEMPTY
+52 error syscall rename
+53 error path /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/autoprefixer
+54 error dest /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.autoprefixer-YkmyGOn7
+55 error errno -66
+56 error ENOTEMPTY: directory not empty, rename '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/autoprefixer' -> '/Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/node_modules/.autoprefixer-YkmyGOn7'
+57 silly unfinished npm timer reify 1778182322332
+58 silly unfinished npm timer reify:retireShallow 1778182322382
+59 verbose cwd /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue
+60 verbose os Darwin 24.1.0
+61 verbose node v22.12.0
+62 verbose npm  v10.9.0
+63 verbose exit -66
+64 verbose code -66
+65 error A complete log of this run can be found in: /Users/fakhrirasyids/Documents/Projects/Repo/Jalan Overseas Project/Jalan Overseas Admin Panel - Vue/.npm-cache/_logs/2026-05-07T19_32_02_139Z-debug-0.log

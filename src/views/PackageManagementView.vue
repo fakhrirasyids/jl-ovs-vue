@@ -1,0 +1,26 @@
+<template>
+  <AdminLayout>
+    <section>
+      <div class="flex h-14 items-center justify-between bg-white px-5 shadow-sm"><div class="text-sm"><span class="text-slate-500">Packages</span><span class="mx-2 text-slate-300">/</span><b>Shanghai 6D5N</b></div><div class="flex gap-3"><button class="btn-outline">Save Draft</button><button class="btn-outline">Preview</button><button class="btn-primary">Publish</button></div></div>
+      <div class="package-grid grid grid-cols-[250px_1fr_250px] gap-5 p-5">
+        <div class="space-y-6">
+          <div class="card p-5"><h3 class="mb-5 font-bold">Pricing Conditions</h3><p class="mb-3 text-sm text-slate-600">Date Range</p><div class="flex gap-2"><input class="input w-28" value="1/4/2025"/><input class="input w-28" value="1/6/2026"/></div><label class="mt-4 flex items-center gap-2 text-sm"><input type="checkbox"/> Enable Seasonal Pricing</label></div>
+          <div class="card p-5"><h3 class="mb-5 font-bold">Group Tier Generator</h3><div class="grid grid-cols-2 gap-3 text-sm"><label>Start Pax<input class="input mt-1 w-full" value="8"/></label><label>Step<input class="input mt-1 w-full" value="2"/></label><label>End Pax<input class="input mt-1 w-full" value="45"/></label><label>FOC<input class="input mt-1 w-full" value="1"/></label></div><button class="btn-primary mt-3 w-full" @click="generateTiers">Generate Pricing Tiers</button><div class="mt-4 rounded-lg bg-slate-50 p-3"><p class="mb-2 text-xs text-slate-500">Generated Tiers:</p><div class="flex flex-wrap gap-2"><span v-for="tier in tiers" :key="tier" class="rounded border border-slate-200 bg-white px-2 py-1 text-xs">{{ tier }}+1</span></div></div></div>
+        </div>
+        <div class="card p-5"><div class="mb-5 flex items-center justify-between"><h3 class="section-title">Package Options</h3><button class="btn-primary" @click="addPackage">＋ Add Package</button></div><PackageCard v-for="(pkg, i) in packages" :key="i" :pkg="pkg" @remove="packages.splice(i,1)" /></div>
+        <div class="card h-fit p-5"><h3 class="mb-5 section-title">Simulation Preview</h3><p class="mb-2 text-sm">Select Date</p><input class="input mb-4 w-full"/><div class="grid grid-cols-3 gap-2 text-sm"><label>Adults<input v-model.number="adults" class="input mt-1 w-full"/></label><label>Children<input v-model.number="children" class="input mt-1 w-full"/></label><label>Infants<input class="input mt-1 w-full" value="0"/></label></div><p class="mt-4 mb-2 text-sm">Select Hotel</p><input class="input w-full"/><div class="mt-5 rounded-xl bg-slate-50 p-4"><p class="text-xs text-slate-400">Selected Package</p><b>Grand Kingsgate Shanghai</b><p class="mb-5 text-sm text-slate-500">4 ★ · Tier: 22+1</p><div class="space-y-3 text-sm"><div class="flex justify-between"><span>Base Price (22+1)</span><b>$0</b></div><div class="flex justify-between text-orange-500"><span>Summer Peak (+$30)</span><b>+$30.00</b></div><div class="flex justify-between"><span>Adult Price (×{{ adults }})</span><b>${{ adults*30 }}.00</b></div><div class="flex justify-between"><span>Child Price (×{{ children }})</span><b>${{ children*24 }}.00</b></div></div><div class="mt-5 border-t pt-4 text-right"><span class="mr-3 font-bold">Total Price</span><b class="text-2xl text-bluebrand">${{ adults*30 + children*24 + 30 }}.00</b><p class="mt-2 rounded bg-white py-2 text-center text-xs text-slate-500">Price per pax: $29.45</p></div></div><button class="btn-outline mt-5 w-full justify-center">Simulate Another Scenario</button></div>
+      </div>
+    </section>
+  </AdminLayout>
+</template>
+<script setup lang="ts">
+import { defineComponent, ref } from 'vue'
+import AdminLayout from '../layouts/AdminLayout.vue'
+const tiers = ref(['8', '10', '12', '14', '16', '18', '20', '22', '24', '26', '28', '30', '32', '34', '36', '38', '40', '42', '44'])
+const packages = ref([{ name:'Grand Kingsgate Shanghai' }, { name:'Grand Kingsgate Shanghai' }])
+const adults = ref(20)
+const children = ref(2)
+function addPackage(){ packages.value.push({ name:'New Package Option' }) }
+function generateTiers(){ tiers.value = Array.from({length:19}, (_,i)=>String(8+i*2)) }
+const PackageCard = defineComponent({ props:{ pkg:{ type:Object, required:true } }, emits:['remove'], template:`<div class="mb-5 rounded-lg border border-slate-200 p-4"><div class="mb-3 flex items-center gap-3"><input class="input flex-1 text-sm font-bold text-slate-500" v-model="pkg.name"/><button>⇧</button><button class="text-red-500" @click="$emit('remove')">×</button></div><div class="mb-4 flex gap-2"><span class="pill-blue">premium</span><span class="pill-blue">city-center</span></div><div class="grid min-w-[640px] grid-cols-9 border border-slate-200 text-center text-sm"><div v-for="n in ['8+1','10+1','12+1','14+1','16+1','18+1','20+1','22+1','24+1']" :key="n" class="border-r border-slate-200 py-3"><b>{{ n }}</b><p class="text-xs text-slate-500">pax</p><p class="mt-3 text-slate-500">$ {{ n==='10+1'?245:n==='20+1'?198:0 }}</p></div></div><div class="mt-4 grid grid-cols-2 gap-4"><label>Single Pax<input class="input mt-1 w-full" value="$ 45"/></label><label>Child Pricing<input class="input mt-1 w-full" value="80"/></label></div><p class="mt-3 text-sm text-slate-600">Use base pricing + dynamic rules</p></div>` })
+</script>
