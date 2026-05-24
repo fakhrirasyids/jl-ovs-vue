@@ -3,10 +3,12 @@
     <section class="create-tour-page mx-auto max-w-[1180px] px-6 py-5">
       <div class="mb-6 flex items-start justify-between gap-4">
         <div>
-          <h1 class="page-title">Create New Tour</h1>
-          <p class="page-subtitle">Add a new tour package for customers</p>
+          <h1 class="page-title">{{ editingTourId ? 'Edit Tour' : 'Create New Tour' }}</h1>
+          <p class="page-subtitle">{{ editingTourId ? 'Update tour package details' : 'Add a new tour package for customers' }}</p>
         </div>
-        <button class="btn-gradient h-[50px] w-48 rounded-xl" @click="$router.push('/tour/jp-sakura')">Save to draft</button>
+        <button class="btn-gradient h-[50px] w-48 rounded-xl disabled:cursor-not-allowed disabled:opacity-60" :disabled="saving" @click="saveDraft">
+          {{ saving ? 'Saving...' : editingTourId ? 'Save changes' : 'Save to draft' }}
+        </button>
       </div>
 
       <div class="create-tour-workspace grid min-h-[calc(100vh-170px)] grid-cols-[380px_minmax(0,1fr)] bg-white">
@@ -70,6 +72,12 @@
               </div>
               <div class="space-y-5">
                 <div class="create-form-row grid grid-cols-[210px_minmax(0,1fr)] gap-6">
+                  <label class="pt-3 text-right text-sm font-bold text-slate-700"><span class="text-red-500">* </span>Slug <span class="text-slate-400">ⓘ</span></label>
+                  <div>
+                  <input v-model="overview.slug" class="input h-14 w-full rounded-none border-slate-400 disabled:bg-slate-100" :disabled="Boolean(editingTourId)" />
+                  </div>
+                </div>
+                <div class="create-form-row grid grid-cols-[210px_minmax(0,1fr)] gap-6">
                   <label class="pt-3 text-right text-sm font-bold text-slate-700"><span class="text-red-500">* </span>Tour Package Name <span class="text-slate-400">ⓘ</span></label>
                   <div>
                   <input v-model="overview.title" class="input h-14 w-full rounded-none border-slate-400" />
@@ -79,11 +87,24 @@
                 <div class="create-form-row grid grid-cols-[210px_minmax(0,1fr)] gap-6">
                   <label class="pt-3 text-right text-sm font-bold text-slate-700"><span class="text-red-500">* </span>Destination <span class="text-slate-400">ⓘ</span></label>
                   <div>
-                  <select v-model="overview.destination" class="input h-10 w-full rounded-none border-slate-400">
-                    <option>Japan</option>
-                    <option>Thailand</option>
-                    <option>Indonesia</option>
-                  </select>
+                  <input v-model="overview.destinationName" class="input h-10 w-full rounded-none border-slate-400" />
+                  </div>
+                </div>
+                <div class="create-form-row grid grid-cols-[210px_minmax(0,1fr)] gap-6">
+                  <label class="pt-3 text-right text-sm font-bold text-slate-700">Partner</label>
+                  <input v-model="overview.partnerName" class="input h-10 w-full rounded-none border-slate-400" />
+                </div>
+                <div class="create-form-row grid grid-cols-[210px_minmax(0,1fr)] gap-6">
+                  <label class="pt-3 text-right text-sm font-bold text-slate-700">Hero Image URL</label>
+                  <input v-model="overview.heroImageUrl" class="input h-10 w-full rounded-none border-slate-400" />
+                </div>
+                <div class="create-form-row grid grid-cols-[210px_minmax(0,1fr)] gap-6">
+                  <label class="pt-3 text-right text-sm font-bold text-slate-700">Trip Rules</label>
+                  <div class="grid grid-cols-4 gap-3">
+                    <input v-model.number="overview.durationDays" class="input h-10" placeholder="Days" type="number" min="0" />
+                    <input v-model.number="overview.durationNights" class="input h-10" placeholder="Nights" type="number" min="0" />
+                    <input v-model.number="overview.minPax" class="input h-10" placeholder="Min pax" type="number" min="0" />
+                    <input v-model.number="overview.maxPax" class="input h-10" placeholder="Max pax" type="number" min="0" />
                   </div>
                 </div>
                 <div class="create-form-row grid grid-cols-[210px_minmax(0,1fr)] gap-6">
@@ -117,15 +138,18 @@
                 <button class="btn-primary" @click="addPackage">＋ Add package</button>
               </div>
               <div class="rounded-lg border border-slate-200 p-6">
-                <div class="grid min-w-[650px] grid-cols-[1fr_128px_128px_88px_28px] gap-3 border-b border-slate-200 pb-4 text-sm font-semibold text-slate-600">
-                  <span>Package</span><span>Start Date</span><span>End Date</span><span>Inventory</span><span></span>
+                <div class="grid min-w-[860px] grid-cols-[1fr_128px_128px_88px_112px_112px_76px_28px] gap-3 border-b border-slate-200 pb-4 text-sm font-semibold text-slate-600">
+                  <span>Package</span><span>Start Date</span><span>End Date</span><span>Inventory</span><span>Adult</span><span>Child</span><span>Currency</span><span></span>
                 </div>
-                <div v-for="(pkg, index) in packages" :key="index" class="grid min-w-[650px] grid-cols-[1fr_128px_128px_88px_28px] gap-3 border-b border-slate-100 py-3">
+                <div v-for="(pkg, index) in packages" :key="index" class="grid min-w-[860px] grid-cols-[1fr_128px_128px_88px_112px_112px_76px_28px] gap-3 border-b border-slate-100 py-3">
                   <input v-model="pkg.name" class="input h-10" />
-                  <input v-model="pkg.start" class="input h-10" />
-                  <input v-model="pkg.end" class="input h-10" />
-                  <input v-model="pkg.inventory" class="input h-10" />
-                  <button class="text-red-500" @click="packages.splice(index, 1)">🗑</button>
+                  <input v-model="pkg.startDate" class="input h-10" type="date" />
+                  <input v-model="pkg.endDate" class="input h-10" type="date" />
+                  <input v-model.number="pkg.inventory" class="input h-10" type="number" min="0" />
+                  <input v-model.number="pkg.adultPrice" class="input h-10" type="number" min="0" />
+                  <input v-model.number="pkg.childPrice" class="input h-10" type="number" min="0" />
+                  <input v-model="pkg.currency" class="input h-10" maxlength="3" />
+                  <button class="text-red-500" type="button" @click="packages.splice(index, 1)">🗑</button>
                 </div>
               </div>
             </div>
@@ -274,6 +298,7 @@
               </div>
             </div>
           </section>
+          <p v-if="saveError" class="mt-5 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{{ saveError }}</p>
         </div>
       </div>
     </section>
@@ -282,12 +307,20 @@
 
 <script setup lang="ts">
 import { nextTick, onMounted, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import AdminLayout from '../layouts/AdminLayout.vue'
+import { createTour, getTour, replaceTourPackages, updateTour } from '../api/admin'
+import type { PackageRequest, Tour } from '../api/types'
 
+const router = useRouter()
+const route = useRoute()
+const editingTourId = ref(typeof route.query.tourId === 'string' ? route.query.tourId : '')
 const activeMain = ref('overview')
 const activeSchedule = ref('package')
 const draft = ref('')
 const chatScroller = ref<HTMLElement | null>(null)
+const saving = ref(false)
+const saveError = ref('')
 
 const mainTabs = [
   { id: 'overview', label: 'Tour Overview' },
@@ -319,14 +352,21 @@ const messages = ref([
 ])
 
 const overview = ref({
-  title: 'Tokyo to Kyoto Escap',
-  destination: 'Japan',
+  slug: 'tokyo-kyoto-escape-7d6n',
+  title: 'Tokyo to Kyoto Escape',
+  destinationName: 'Japan',
+  partnerName: 'Global Explorer Expeditions',
+  heroImageUrl: '',
+  durationDays: 7,
+  durationNights: 6,
+  minPax: 15,
+  maxPax: 20,
   description: 'Experience the magic of Japan during the breathtaking Sakura season. This 7-day comprehensive journey takes you through the bustling neon-lit streets of Tokyo, the serene ancient temples of Kyoto, and offers majestic views of Mount Fuji. Immerse yourself in authentic cultural experiences, from traditional tea ceremonies to exhilarating bullet train (Shinkansen) rides. Perfect for first-time visitors wanting a complete Japanese experience.',
   inclusion: 'Experience the magic of Japan during the breathtaking Sakura season. This 7-day comprehensive journey takes you through the bustling neon-lit streets of Tokyo, the serene ancient temples of Kyoto, and offers majestic views of Mount Fuji. Immerse yourself in authentic cultural experiences, from traditional tea ceremonies to exhilarating bullet train (Shinkansen) rides. Perfect for first-time visitors wanting a complete Japanese experience.',
 })
 const packages = ref([
-  { name: 'Kingsgate Hotel Al Jaddaf', start: '2/4/2026', end: '2/4/2026', inventory: 50 },
-  { name: 'Grand Kingston Hotel', start: '2/4/2026', end: '2/4/2026', inventory: 50 },
+  { name: 'Kingsgate Hotel Al Jaddaf', startDate: '2026-04-02', endDate: '2026-04-08', inventory: 50, adultPrice: 2500, childPrice: 2000, currency: 'USD', active: true },
+  { name: 'Grand Kingston Hotel', startDate: '2026-04-02', endDate: '2026-04-08', inventory: 50, adultPrice: 2700, childPrice: 2200, currency: 'USD', active: true },
 ])
 const pricing = ref([
   { hotel: 'Kingsgate Hotel Al Jaddaf', rows: [{ price: 92, min: 2, max: 3 }, { price: 107, min: 4, max: 5 }] },
@@ -341,7 +381,7 @@ const days = ref([
 const mediaPrompt = ref('Mount Fuji with cherry blossoms in the foreground, spring season, hyper realistic, 4k')
 const generatedAssets = ref(['1', '2', '3'])
 
-function addPackage() { packages.value.push({ name: 'New Hotel Package', start: '2/4/2026', end: '2/4/2026', inventory: 50 }) }
+function addPackage() { packages.value.push({ name: 'New Hotel Package', startDate: '', endDate: '', inventory: 50, adultPrice: 0, childPrice: 0, currency: 'USD', active: true }) }
 function addPricing(index: number) { pricing.value[index].rows.push({ price: 120, min: 6, max: 8 }) }
 function addAddon() { addons.value.push({ name: 'Travel Insurance', price: 30, inventory: 50, min: 1, max: 5 }) }
 function addException() { exceptions.value.push({ name: 'Grand Kingston Hotel', price: 135, inventory: 25, min: 6, max: 9 }) }
@@ -361,7 +401,100 @@ function scrollChat() {
   })
 }
 
+function sanitizePackage(pkg: PackageRequest): PackageRequest {
+  return {
+    name: pkg.name.trim(),
+    startDate: pkg.startDate || null,
+    endDate: pkg.endDate || null,
+    inventory: Number(pkg.inventory) || 0,
+    adultPrice: Number(pkg.adultPrice) || 0,
+    childPrice: pkg.childPrice === null || pkg.childPrice === undefined ? null : Number(pkg.childPrice) || 0,
+    currency: (pkg.currency || 'USD').trim().toUpperCase().slice(0, 3),
+    active: pkg.active ?? true,
+  }
+}
+
+async function saveDraft() {
+  saveError.value = ''
+
+  if (!overview.value.slug.trim() || !overview.value.title.trim()) {
+    saveError.value = 'Slug and tour package name are required.'
+    activeMain.value = 'overview'
+    return
+  }
+
+  const validPackages = packages.value.map(sanitizePackage).filter((pkg) => pkg.name && pkg.currency.length === 3)
+  saving.value = true
+
+  try {
+    const payload = {
+      title: overview.value.title.trim(),
+      description: overview.value.description,
+      destinationName: overview.value.destinationName,
+      partnerName: overview.value.partnerName,
+      heroImageUrl: overview.value.heroImageUrl,
+      durationDays: Number(overview.value.durationDays) || 0,
+      durationNights: Number(overview.value.durationNights) || 0,
+      minPax: Number(overview.value.minPax) || 0,
+      maxPax: Number(overview.value.maxPax) || 0,
+    }
+    const tour = editingTourId.value
+      ? await updateTour(editingTourId.value, payload)
+      : await createTour({ slug: overview.value.slug.trim(), ...payload })
+
+    if (validPackages.length) {
+      await replaceTourPackages(tour.id, validPackages)
+    }
+
+    await router.push(`/tour/${tour.id}`)
+  } catch (err) {
+    saveError.value = err instanceof Error ? err.message : 'Failed to save tour'
+  } finally {
+    saving.value = false
+  }
+}
+
+function applyTour(existing: Tour) {
+  overview.value.slug = existing.slug
+  overview.value.title = existing.title
+  overview.value.description = existing.description || ''
+  overview.value.destinationName = existing.destinationName || ''
+  overview.value.partnerName = existing.partnerName || ''
+  overview.value.heroImageUrl = existing.heroImageUrl || ''
+  overview.value.durationDays = existing.durationDays || 0
+  overview.value.durationNights = existing.durationNights || 0
+  overview.value.minPax = existing.minPax || 0
+  overview.value.maxPax = existing.maxPax || 0
+  packages.value = (existing.packages || []).map((pkg) => ({
+    name: pkg.name,
+    startDate: pkg.startDate || '',
+    endDate: pkg.endDate || '',
+    inventory: pkg.inventory || 0,
+    adultPrice: Number(pkg.adultPrice) || 0,
+    childPrice: Number(pkg.childPrice) || 0,
+    currency: pkg.currency || 'USD',
+    active: pkg.active ?? true,
+  }))
+}
+
+async function loadExistingTour() {
+  if (!editingTourId.value) return
+  saving.value = true
+  saveError.value = ''
+
+  try {
+    applyTour(await getTour(editingTourId.value))
+  } catch (err) {
+    saveError.value = err instanceof Error ? err.message : 'Failed to load tour'
+  } finally {
+    saving.value = false
+  }
+}
+
 watch(() => messages.value.length, scrollChat)
-onMounted(scrollChat)
+onMounted(() => {
+  scrollChat()
+  void loadExistingTour()
+})
 
 </script>

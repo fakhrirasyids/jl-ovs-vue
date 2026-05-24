@@ -1,6 +1,9 @@
 <template>
   <AdminLayout>
     <div class="tour-detail-page">
+      <div v-if="loading" class="px-6 py-10 text-sm text-slate-500">Loading tour...</div>
+      <div v-else-if="error" class="px-6 py-10 text-sm text-red-600">{{ error }}</div>
+      <template v-else-if="tour">
       <header class="tour-detail-toolbar">
         <button class="tour-detail-back" @click="$router.push('/tour-listing')">
           <span aria-hidden="true">←</span>
@@ -16,13 +19,13 @@
             <img :src="icon('preview')" alt="" />
             Preview
           </button>
-          <button class="detail-action-button" @click="$router.push('/create-tour')">
+          <button class="detail-action-button" @click="$router.push(`/create-tour?tourId=${tour.id}`)">
             <img :src="icon('edit')" alt="" />
             Edit Listing
           </button>
-          <button class="detail-publish-button" @click="published = true">
+          <button class="detail-publish-button" :disabled="publishing" @click="publishCurrentTour">
             <img :src="icon('publish')" alt="" />
-            Publish Listing
+            {{ publishing ? 'Publishing...' : 'Publish Listing' }}
           </button>
           <button class="detail-more-button" aria-label="More actions">...</button>
         </div>
@@ -34,11 +37,11 @@
             <div class="tour-detail-hero-shade"></div>
             <div class="tour-detail-hero-content">
               <div class="tour-detail-hero-copy">
-                <span class="tour-status-pill">{{ published ? 'Live' : 'Draft' }}</span>
-                <h1>Tokyo to Kyoto Escape 7D 6N</h1>
+                <span class="tour-status-pill">{{ tour.status === 'PUBLISHED' ? 'Live' : statusLabel(tour.status) }}</span>
+                <h1>{{ tour.title }}</h1>
                 <div class="tour-detail-meta">
-                  <span>Tokyo · Mt. Fuji · Hakone · Kyoto · Nara</span>
-                  <span>ID: JP-SAKURA-7D6N-2026</span>
+                  <span>{{ tour.destinationName || 'No destination set' }}</span>
+                  <span>ID: {{ tour.slug }}</span>
                 </div>
               </div>
 
@@ -59,19 +62,19 @@
             </div>
             <div class="tour-stat-item">
               <img :src="icon('duration')" alt="" />
-              7 Days 6 Nights
+              {{ durationLabel }}
             </div>
             <div class="tour-stat-item">
               <img :src="icon('group-size')" alt="" />
-              15–20 Pax
+              {{ paxLabel }}
             </div>
             <div class="tour-stat-item tour-price-stat">
               <img :src="icon('retail-price')" alt="" />
-              USD 2,500 <span>/pax</span>
+              {{ priceLabel }} <span>/pax</span>
             </div>
             <div class="tour-stat-item">
               <span class="detail-calendar-icon"></span>
-              Created Apr 7, 2026
+              {{ tour.status }}
             </div>
           </section>
 
@@ -93,7 +96,7 @@
               <article class="detail-card detail-card-wide">
                 <h2><img :src="icon('tour-desc')" alt="" />Tour Description</h2>
                 <p class="detail-copy">
-                  Experience the magic of Japan during the breathtaking Sakura season. This 7-day comprehensive journey takes you through the bustling neon-lit streets of Tokyo, the serene ancient temples of Kyoto, and offers majestic views of Mount Fuji. Immerse yourself in authentic cultural experiences, from traditional tea ceremonies to exhilarating bullet train (Shinkansen) rides. Perfect for first-time visitors wanting a complete Japanese experience.
+                  {{ tour.description || 'No description has been added yet.' }}
                 </p>
               </article>
 
@@ -121,7 +124,7 @@
               <article class="operator-card">
                 <div class="operator-avatar">G</div>
                 <div>
-                  <b>Global Explorer Expeditions</b>
+                  <b>{{ tour.partnerName || 'No partner set' }}</b>
                   <p>Official Tour Operator · Verified Partner</p>
                 </div>
                 <span>Verified</span>
@@ -150,7 +153,7 @@
             </div>
 
             <article v-else-if="active === 'pricing'" class="pricing-card">
-              <h2>Kingsgate Hotel Al Jaddaf</h2>
+                <h2>{{ firstPackage?.name || 'Package Pricing' }}</h2>
               <div class="pricing-grid pricing-head">
                 <span>Package</span>
                 <span>Price</span>
@@ -158,13 +161,14 @@
                 <span>Min buy</span>
                 <span>Max buy</span>
               </div>
-              <div v-for="row in pricingRows" :key="row.price" class="pricing-grid pricing-row">
-                <input class="detail-input" value="Kingsgate Hotel Al Jaddaf" />
-                <input class="detail-input" :value="'USD  ' + row.price" />
-                <input class="detail-input" value="50" />
-                <input class="detail-input" :value="row.min" />
-                <input class="detail-input" :value="row.max" />
+              <div v-for="row in tour.packages || []" :key="row.id" class="pricing-grid pricing-row">
+                <input class="detail-input" :value="row.name" readonly />
+                <input class="detail-input" :value="`${row.currency} ${row.adultPrice}`" readonly />
+                <input class="detail-input" :value="row.inventory ?? '-'" readonly />
+                <input class="detail-input" :value="tour.minPax ?? '-'" readonly />
+                <input class="detail-input" :value="tour.maxPax ?? '-'" readonly />
               </div>
+              <p v-if="!tour.packages?.length" class="py-6 text-sm text-slate-500">No packages have been saved for this tour.</p>
             </article>
 
             <div v-else-if="active === 'media'" class="media-panel">
@@ -186,7 +190,7 @@
                   <h2>Analytics will be available after publishing.</h2>
                   <p>Once this listing goes live, you'll see views, clicks, booking conversion rates, and revenue metrics here.</p>
                 </div>
-                <button class="btn-primary" @click="published = true">Publish Now</button>
+                <button class="btn-primary" @click="publishCurrentTour">Publish Now</button>
               </article>
 
               <div class="analytics-grid">
@@ -199,15 +203,15 @@
         </main>
 
         <aside class="tour-detail-sidebar">
-          <div class="draft-card" :class="{ 'draft-card-live': published }">
+          <div class="draft-card" :class="{ 'draft-card-live': tour.status === 'PUBLISHED' }">
             <div class="draft-title">
-              <img :src="icon(published ? 'check' : 'warn')" alt="" />
-              <b>{{ published ? 'Published' : 'Draft — Not Published' }}</b>
+              <img :src="icon(tour.status === 'PUBLISHED' ? 'check' : 'warn')" alt="" />
+              <b>{{ tour.status === 'PUBLISHED' ? 'Published' : `${statusLabel(tour.status)} — Not Published` }}</b>
             </div>
             <p>This listing is saved as a draft. Publish it to make it visible to customers.</p>
-            <button class="detail-publish-button w-full" @click="published = true">
+            <button class="detail-publish-button w-full" :disabled="publishing" @click="publishCurrentTour">
               <img :src="icon('publish')" alt="" />
-              Publish Listing
+              {{ publishing ? 'Publishing...' : 'Publish Listing' }}
             </button>
           </div>
 
@@ -227,8 +231,8 @@
           <section class="side-section">
             <h2>Listing Info</h2>
             <div class="listing-info-card">
-              <p><span>Tour ID</span><b>JP-SAKURA-7D6N-2026</b></p>
-              <p><span>Brand</span><b>Global Explorer</b></p>
+              <p><span>Tour ID</span><b>{{ tour.slug }}</b></p>
+              <p><span>Brand</span><b>{{ tour.partnerName || '-' }}</b></p>
               <p><span>Category</span><b>International</b></p>
               <p><span>AI Generated</span><b class="text-bluebrand">Yes</b></p>
               <p><span>Created</span><b>Apr 7, 2026</b></p>
@@ -257,6 +261,7 @@
           <button class="delete-listing-button" @click="deleted = true">Delete Listing</button>
         </aside>
       </div>
+      </template>
     </div>
 
     <div v-if="showPreview" class="detail-modal" @click.self="showPreview = false">
@@ -272,15 +277,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
 import AdminLayout from '../layouts/AdminLayout.vue'
+import { getTour, publishTour } from '../api/admin'
+import type { Tour, TourStatus } from '../api/types'
 
 type TabId = 'overview' | 'itinerary' | 'pricing' | 'media' | 'analytics'
 
 const active = ref<TabId>('overview')
-const published = ref(false)
 const showPreview = ref(false)
 const deleted = ref(false)
+const route = useRoute()
+const tour = ref<Tour | null>(null)
+const loading = ref(false)
+const publishing = ref(false)
+const error = ref('')
 const icon = (name: string) => `/assets/icons/ic-${name}.png`
 
 const tabs: { id: TabId; label: string; icon: string }[] = [
@@ -291,12 +303,61 @@ const tabs: { id: TabId; label: string; icon: string }[] = [
   { id: 'analytics', label: 'Analytics', icon: 'analytics' },
 ]
 
-const quickDetails = [
-  { icon: 'retail-price', title: 'Retail Price', value: 'USD 2,500 / pax' },
-  { icon: 'duration', title: 'Duration', value: '7 Days · 6 Nights' },
-  { icon: 'group-size', title: 'Group Size', value: '15–20 Pax' },
-  { icon: 'destination', title: 'Destination', value: 'Japan (3 Cities)' },
-]
+const firstPackage = computed(() => tour.value?.packages?.[0])
+const durationLabel = computed(() => {
+  const daysCount = tour.value?.durationDays ?? 0
+  const nightsCount = tour.value?.durationNights ?? 0
+  if (!daysCount && !nightsCount) return '-'
+  return `${daysCount} Days ${nightsCount} Nights`
+})
+const paxLabel = computed(() => {
+  const min = tour.value?.minPax ?? 0
+  const max = tour.value?.maxPax ?? 0
+  if (!min && !max) return '-'
+  return `${min}-${max} Pax`
+})
+const priceLabel = computed(() => {
+  if (!firstPackage.value) return '-'
+  return `${firstPackage.value.currency} ${Number(firstPackage.value.adultPrice).toLocaleString()}`
+})
+const quickDetails = computed(() => [
+  { icon: 'retail-price', title: 'Retail Price', value: priceLabel.value },
+  { icon: 'duration', title: 'Duration', value: durationLabel.value },
+  { icon: 'group-size', title: 'Group Size', value: paxLabel.value },
+  { icon: 'destination', title: 'Destination', value: tour.value?.destinationName || '-' },
+])
+
+function statusLabel(status: TourStatus) {
+  return status === 'PUBLISHED' ? 'Live' : status[0] + status.slice(1).toLowerCase()
+}
+
+async function loadTour() {
+  const tourId = String(route.params.id || '')
+  loading.value = true
+  error.value = ''
+
+  try {
+    tour.value = await getTour(tourId)
+  } catch (err) {
+    error.value = err instanceof Error ? err.message : 'Failed to load tour'
+  } finally {
+    loading.value = false
+  }
+}
+
+async function publishCurrentTour() {
+  if (!tour.value) return
+  publishing.value = true
+  error.value = ''
+
+  try {
+    tour.value = await publishTour(tour.value.id)
+  } catch (err) {
+    error.value = err instanceof Error ? err.message : 'Failed to publish tour'
+  } finally {
+    publishing.value = false
+  }
+}
 
 const checklistDone = [
   'Tour Name & Description',
@@ -341,8 +402,5 @@ const days = [
   { title: 'Kyoto Cultural Heritage', description: 'Explore Kinkaku-ji (The Golden Pavilion), stroll through the Arashiyama Bamboo Grove, and experience an authentic traditional Japanese tea ceremony.' },
 ]
 
-const pricingRows = [
-  { price: 92, min: '2 pax', max: '3 pax' },
-  { price: 107, min: '4 pax', max: '5 pax' },
-]
+onMounted(loadTour)
 </script>

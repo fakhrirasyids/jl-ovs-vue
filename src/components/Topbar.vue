@@ -14,18 +14,32 @@
         </div>
       </div>
       <div class="flex items-center gap-3">
-        <div class="flex h-8 w-8 items-center justify-center rounded-full bg-bluebrand text-sm font-bold">A</div>
+        <div class="flex h-8 w-8 items-center justify-center rounded-full bg-bluebrand text-sm font-bold">{{ initial }}</div>
         <div class="leading-tight">
-          <p class="text-sm font-semibold">Admin User</p>
-          <p class="text-xs text-slate-300">admin@tourapp.com</p>
+          <p class="text-sm font-semibold">{{ admin?.name || 'Admin User' }}</p>
+          <p class="text-xs text-slate-300">{{ admin?.email || 'admin@jalanoverseas.com' }}</p>
         </div>
+        <button class="ml-3 rounded-lg border border-white/20 px-3 py-1.5 text-xs font-semibold text-white/90 transition hover:bg-white/10" @click="logout">Logout</button>
       </div>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import LogoMark from './LogoMark.vue'
+import { getStoredAdmin } from '../api/client'
+import { logoutAdmin } from '../api/admin'
+import type { AdminUser } from '../api/types'
+
 const keyword = ref('')
+const router = useRouter()
+const admin = ref(getStoredAdmin<AdminUser>())
+const initial = computed(() => admin.value?.name?.trim()[0]?.toUpperCase() || 'A')
+
+async function logout() {
+  logoutAdmin()
+  await router.push('/login')
+}
 </script>

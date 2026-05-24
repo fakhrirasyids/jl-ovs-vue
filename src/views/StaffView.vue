@@ -21,9 +21,12 @@
           <span>Join Date</span>
           <span>Actions</span>
         </div>
-        <div v-for="(staff, index) in staffs" :key="staff.email" class="staff-grid staff-row">
+        <div v-if="loading" class="px-6 py-10 text-sm text-slate-500">Loading staff...</div>
+        <div v-else-if="error" class="px-6 py-10 text-sm text-red-600">{{ error }}</div>
+        <div v-else-if="!staffs.length" class="px-6 py-10 text-sm text-slate-500">No staff accounts found.</div>
+        <div v-for="staff in staffs" v-else :key="staff.id" class="staff-grid staff-row">
           <div class="staff-name">
-            <span>{{ staff.initial }}</span>
+            <span>{{ initial(staff.name) }}</span>
             <b>{{ staff.name }}</b>
           </div>
           <div class="staff-email">
@@ -34,11 +37,10 @@
             <img src="/assets/ic-role.png" alt="" />
             <span :class="roleClass(staff.role)">{{ staff.role }}</span>
           </div>
-          <span class="staff-status" :class="staff.status === 'active' ? 'staff-active' : 'staff-inactive'">{{ staff.status }}</span>
-          <span>{{ staff.date }}</span>
+          <span class="staff-status" :class="staff.status === 'ACTIVE' ? 'staff-active' : 'staff-inactive'">{{ staff.status }}</span>
+          <span>{{ staff.lastLoginAt ? new Date(staff.lastLoginAt).toLocaleDateString() : '-' }}</span>
           <div class="row-actions staff-actions">
             <button aria-label="Toggle staff status" @click="toggleStatus(staff)"><img :src="icon('edit')" alt="" /></button>
-            <button aria-label="Delete staff" @click="staffs.splice(index, 1)"><img :src="icon('delete')" alt="" /></button>
           </div>
         </div>
       </div>
@@ -57,14 +59,20 @@
         </label>
         <label>
           <span>Role</span>
-          <input v-model="newStaff.role" />
+          <select v-model="newStaff.role">
+            <option value="ADMIN">ADMIN</option>
+            <option value="EDITOR">EDITOR</option>
+            <option value="VIEWER">VIEWER</option>
+            <option value="SUPER_ADMIN">SUPER_ADMIN</option>
+          </select>
         </label>
         <label>
-          <span>Status</span>
-          <input v-model="newStaff.status" />
+          <span>Password</span>
+          <input v-model="newStaff.password" type="password" placeholder="Admin123!" />
         </label>
+        <p v-if="modalError" class="text-sm text-red-600">{{ modalError }}</p>
         <div class="staff-modal-actions">
-          <button type="submit">Add Staff</button>
+          <button type="submit" :disabled="saving">{{ saving ? 'Saving...' : 'Add Staff' }}</button>
           <button type="button" @click="showAddModal = false">Cancel</button>
         </div>
       </form>
@@ -73,42 +81,78 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import AdminLayout from '../layouts/AdminLayout.vue'
-
-type Staff = { initial: string; name: string; email: string; role: string; status: string; date: string }
+import { createStaff, listStaff, updateStaff } from '../api/admin'
+import type { AdminRole, AdminUser } from '../api/types'
 
 const icon = (name: string) => `/assets/icons/ic-${name}.png`
 const showAddModal = ref(false)
-const staffs = ref<Staff[]>([
-  { initial: 'A', name: 'Admin User', email: 'admin@tourapp.com', role: 'admin', status: 'active', date: '15/1/2024' },
-  { initial: 'J', name: 'John Doe', email: 'john@tourapp.com', role: 'editor', status: 'active', date: '20/2/2024' },
-  { initial: 'J', name: 'Jane Smith', email: 'jane@tourapp.com', role: 'viewer', status: 'inactive', date: '10/3/2024' },
-])
-const newStaff = reactive({ name: '', email: '', role: '', status: '' })
+const staffs = ref<AdminUser[]>([])
+const loading = ref(false)
+const saving = ref(false)
+const error = ref('')
+const modalError = ref('')
+const newStaff = reactive({ name: '', email: '', role: 'VIEWER' as AdminRole, password: '' })
+
+function initial(name: string) {
+  return name.trim()[0]?.toUpperCase() || '?'
+}
 
 function roleClass(role: string) {
-  return role === 'admin' ? 'role-admin' : role === 'editor' ? 'role-editor' : 'role-viewer'
+  return role === 'ADMIN' || role === 'SUPER_ADMIN' ? 'role-admin' : role === 'EDITOR' ? 'role-editor' : 'role-viewer'
 }
 
-function toggleStatus(staff: Staff) {
-  staff.status = staff.status === 'active' ? 'inactive' : 'active'
+async function toggleStatus(staff: AdminUser) {
+  const status = staff.status === 'ACTIVE' ? 'INACTIVE' : 'ACTIVE'
+  const previous = staff.status
+  staff.status = status
+
+  try {
+    const updated = await updateStaff(staff.id, { status })
+    Object.assign(staff, updated)
+  } catch (err) {
+    staff.status = previous
+    error.value = err instanceof Error ? err.message : 'Failed to update staff'
+  }
 }
 
-function submitStaff() {
-  const name = newStaff.name.trim() || 'John Doe'
-  staffs.value.push({
-    initial: name[0]?.toUpperCase() || 'J',
-    name,
-    email: newStaff.email.trim() || 'john@tourapp.com',
-    role: newStaff.role.trim() || 'viewer',
-    status: newStaff.status.trim() || 'active',
-    date: '1/5/2024',
-  })
-  newStaff.name = ''
-  newStaff.email = ''
-  newStaff.role = ''
-  newStaff.status = ''
-  showAddModal.value = false
+async function submitStaff() {
+  modalError.value = ''
+  saving.value = true
+
+  try {
+    const created = await createStaff({
+      name: newStaff.name.trim(),
+      email: newStaff.email.trim(),
+      password: newStaff.password,
+      role: newStaff.role,
+    })
+    staffs.value.push(created)
+    newStaff.name = ''
+    newStaff.email = ''
+    newStaff.password = ''
+    newStaff.role = 'VIEWER'
+    showAddModal.value = false
+  } catch (err) {
+    modalError.value = err instanceof Error ? err.message : 'Failed to create staff'
+  } finally {
+    saving.value = false
+  }
 }
+
+async function loadStaff() {
+  loading.value = true
+  error.value = ''
+
+  try {
+    staffs.value = await listStaff()
+  } catch (err) {
+    error.value = err instanceof Error ? err.message : 'Failed to load staff'
+  } finally {
+    loading.value = false
+  }
+}
+
+onMounted(loadStaff)
 </script>
